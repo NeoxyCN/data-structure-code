@@ -34,7 +34,7 @@ void removeItem(ListNode *n0) {
 }
 
 ListNode *access(ListNode *head, int index) {
-    for()
+    //for()
 }
 
 int main(void) {

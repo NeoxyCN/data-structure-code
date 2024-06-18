@@ -1,27 +1,27 @@
 #include <stdlib.h>
 
-int randomAccess(int *nums, int size) {
+int array_randomAccess(int *nums, int size) {
     int randomIndex = rand() % size;
     int randomNum = nums[randomIndex];
 
     return randomNum;
 }
 
-void insert(int *nums, int size, int num, int index) {
+void array_insert(int *nums, int size, int num, int index) {
     for (int i = size - 1; i > index; i--) {
         nums[i] = nums[i - 1];
     }
     nums[index] = num;
 }
 
-void removeItem(int *nums, int index, int size) {
+void array_removeItem(int *nums, int index, int size) {
     for (int i = index; i < size - 1; i++) {
         nums[i] = nums[i + 1];
     }
 }
 
 // return the count of the array
-int traverse(int *nums, int size) {
+int array_traverse(int *nums, int size) {
     int count = 0;
 
     // `i < size` instead of `i <= size`,
@@ -33,7 +33,7 @@ int traverse(int *nums, int size) {
     return count;
 }
 
-int find(int *nums, int size, int target) {
+int array_find(int *nums, int size, int target) {
     for (int i = 0; i < size; i++) {
         if (nums[i] == target) {
             return i;
@@ -43,7 +43,7 @@ int find(int *nums, int size, int target) {
     return -1;
 }
 
-int *extend(int *nums, int size, int enlarge) {
+int *array_extend(int *nums, int size, int enlarge) {
     int *new_array = (int *) malloc(sizeof(int) * (size + enlarge));
 
     // copy array
@@ -51,7 +51,7 @@ int *extend(int *nums, int size, int enlarge) {
         new_array[i] = nums[i];
     }
 
-    for (int i = size; i < (size + enlarge); i++) {
+    for (int i = size; i <(size + enlarge); i++) {
         new_array[i] = 0;
     }
 
