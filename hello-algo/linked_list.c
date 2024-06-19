@@ -39,10 +39,10 @@ ListNode *access(ListNode *head, int index) {
 
 int main(void) {
     // new node
-    ListNode *n0 = newListNode(1);
-    ListNode *n1 = newListNode(3);
+    //ListNode *n0 = newListNode(1);
+    //ListNode *n1 = newListNode(3);
 
-    n0->next = n1;
+    //n0->next = n1;
 
     return 0;
 }
