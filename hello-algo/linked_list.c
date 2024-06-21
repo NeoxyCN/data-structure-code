@@ -37,12 +37,14 @@ ListNode *access(ListNode *head, int index) {
     //for()
 }
 
+/*
 int main(void) {
-    // new node
-    //ListNode *n0 = newListNode(1);
-    //ListNode *n1 = newListNode(3);
+    new node;
+    ListNode *n0 = newListNode(1);
+    ListNode *n1 = newListNode(3);
 
-    //n0->next = n1;
+    n0->next = n1;
 
     return 0;
 }
+*/
