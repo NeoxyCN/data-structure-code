@@ -5,4 +5,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(data_structure_code hello-algo/linked_list.c
         hello-algo/array.c
-        main.c)
+        main.c
+        hello-algo/list.c)

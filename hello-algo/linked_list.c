@@ -6,7 +6,7 @@ typedef struct ListNode {
     struct ListNode *next;
 } ListNode;
 
-ListNode *newListNode(int val) {
+ListNode * linklist_newListNode(int val) {
     ListNode *node;
     node = (ListNode *) malloc(sizeof(ListNode));
     node->val = val;
@@ -14,14 +14,14 @@ ListNode *newListNode(int val) {
     return node;
 }
 
-void insert(ListNode *n0, ListNode *p) {
+void linklist_insert(ListNode *n0, ListNode *p) {
     ListNode *n1 = n0->next;
     p->next = n1;
     n0->next = p;
 }
 
 // delete the first node after n0
-void removeItem(ListNode *n0) {
+void linklist_removeItem(ListNode *n0) {
     if(!n0->next) {
         return;
     }
@@ -33,7 +33,7 @@ void removeItem(ListNode *n0) {
     n0->next = p;
 }
 
-ListNode *access(ListNode *head, int index) {
+ListNode *linklist_access(ListNode *head, int index) {
     //for()
 }
 
