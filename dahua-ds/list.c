@@ -25,7 +25,23 @@ void LocateElem();
 
 Status ListInsert(SqList *L, int i, ElemType e);
 
-void ListDelete();
+Status ListDelete(SqList *L,int i,ElemType *e) {
+    int k;
+    if (L->length==0) { // list是空的
+        return ERROR;
+    }
+    if (i<1 || i>L->length) {   //位置不正确
+        return ERROR;
+    }
+    *e = L->data[i-1];
+    if (i<L->length) {
+        for (k=i; k<L->length; k++) {
+            L->data[k-1]=L->data[k];
+        }
+    }
+    L->length--;
+    return OK;
+}
 
 void ListLength();
 
